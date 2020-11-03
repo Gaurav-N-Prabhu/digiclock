@@ -1,5 +1,11 @@
-body{
+body
+{
     background-color: black;
+}
+@font-face
+{
+	font-family: sevenSegment;
+	src: url(seven-segment.ttf);
 }
 h2
 {
@@ -14,7 +20,9 @@ h2
 
 #realtime #time
 {
-    display: flex;
+    display: grid;
+	justify-content: center;
+    align-items: center center;
 }
 
 div
@@ -32,11 +40,12 @@ div label
     background: linear-gradient(to right, #ccffff, #006622);
     color: #111;
     font-weight: 600;
-    display: flex;
+    font-family: sevenSegment;
+    display: grid;
     justify-content: center;
     align-items: center center;
-    font-size: 50px;
-    z-index: 10;
+    font-size: 100px;
+  
 }
 
 label:before
@@ -56,12 +65,12 @@ div label:nth-child(2)
 {
     height: 20px;
     font-size: 20px;
-    letter-spacing: 0.2em;
-    z-index: 9;
+    letter-spacing: 0.5em;
     color: #111;
     text-transform: uppercase;
     background: linear-gradient(to right, #ccffff, #006622);
-    top: 1px;
+	bottom: 1px;
+   
 }
 
 .hrs
