@@ -2,11 +2,13 @@ body
 {
     background-color: black;
 }
+
 @font-face
 {
 	font-family: sevenSegment;
 	src: url(seven-segment.ttf);
 }
+
 h2
 {
     color: #ffff00;
@@ -20,9 +22,7 @@ h2
 
 #realtime #time
 {
-    display: grid;
-	justify-content: center;
-    align-items: center center;
+    display: flex;
 }
 
 div
@@ -40,12 +40,11 @@ div label
     background: linear-gradient(to right, #ccffff, #006622);
     color: #111;
     font-weight: 600;
-    font-family: sevenSegment;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center center;
-    font-size: 100px;
-  
+    font-size: 50px;
+    z-index: 10;
 }
 
 label:before
@@ -105,4 +104,32 @@ div label:nth-child(2)
 {
     transform: scale(1.1);
     background: #ccffff;
+}
+
+@media screen and (max-width: 600px)
+{
+	div label
+	{
+		cursor: pointer;
+		position: relative;
+		width: 425px;
+		height: 200px;
+		background: linear-gradient(to right, #ccffff, #006622);
+		color: #111;
+		font-weight: 600;
+		font-family: sevenSegment;
+		display: grid;
+		justify-content: center;
+		align-items: center center;
+		font-size: 100px;
+  
+	}
+	
+	#realtime #time
+	{
+		display: grid;
+		justify-content: center;
+		align-items: center center;
+	}
+	
 }
